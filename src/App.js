@@ -4,6 +4,12 @@ import Preview from './Preview.Component';
 import './App.css';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      text: ''
+    };
+  }
   render() {
     return (
       <div className="App">
