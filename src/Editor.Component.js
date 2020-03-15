@@ -8,7 +8,10 @@ class Editor extends React.Component {
 
     render() {
         return (
-            <textarea id="editor"> </textarea>
+            <div>
+                <h1>Enter Your GitHub Style Markdown:</h1>
+                <textarea id="editor" class="editor"> </textarea>
+            </div>
         );
     }
 }
