@@ -9,13 +9,23 @@ class App extends React.Component {
     this.state = {
       text: ''
     };
+
+    this.handleChange = this.handleChange.bind(this);
   }
+
+  handleChange() {
+    console.log("SOME CHANGE!");
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <Editor />
-          <Preview />
+          <div>
+              <h1>Enter Your GitHub Style Markdown:</h1>
+              <textarea id="editor" className="editor" onChange={this.handleChange}> </textarea>
+          </div>
+          <Preview text="Hello world" />
         </header>
       </div>
     );
