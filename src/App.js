@@ -1,6 +1,5 @@
 import React from 'react';
-import Editor from './Editor.Component';
-import Preview from './Preview.Component';
+import Preview from './Preview';
 import './App.css';
 
 class App extends React.Component {
@@ -9,12 +8,11 @@ class App extends React.Component {
     this.state = {
       text: ''
     };
-
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange() {
-    console.log("SOME CHANGE!");
+  handleChange(event) {
+    this.setState({text: event.target.value});
   }
 
   render() {
@@ -25,7 +23,7 @@ class App extends React.Component {
               <h1>Enter Your GitHub Style Markdown:</h1>
               <textarea id="editor" className="editor" onChange={this.handleChange}> </textarea>
           </div>
-          <Preview text="Hello world" />
+          <Preview text={this.state.text} />
         </header>
       </div>
     );
