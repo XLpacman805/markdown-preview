@@ -1,4 +1,5 @@
 import React from 'react';
+import Markdown from 'markdown-to-jsx';
 
 class Preview extends React.Component {
     constructor(props) {
@@ -8,7 +9,7 @@ class Preview extends React.Component {
     render() {
         return (
             <div id="preview">
-                <h2>{this.props.text}</h2>
+                <Markdown>{this.props.text}</Markdown>
             </div>
         );
     } 
