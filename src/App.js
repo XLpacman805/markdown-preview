@@ -6,7 +6,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: ''
+      text: '# Welcome! \n You can enter your GitHub flavored markdown in the text area above and it will render it automatically! Give it a try!'
     };
     this.handleChange = this.handleChange.bind(this);
   }
