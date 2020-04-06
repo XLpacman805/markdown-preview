@@ -21,7 +21,7 @@ class App extends React.Component {
         <header className="App-header">
           <div>
               <h1>Enter Your GitHub Style Markdown:</h1>
-              <textarea id="editor" className="editor" onChange={this.handleChange}> </textarea>
+              <textarea id="editor" className="editor" onChange={this.handleChange}></textarea>
           </div>
           <Preview text={this.state.text} />
         </header>
