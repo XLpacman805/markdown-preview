@@ -1,4 +1,4 @@
-runtime: nodejs10
+runtime: nodejs12
 instance_class: F2
 env: standard
 service: markdown-preview
@@ -10,6 +10,7 @@ service: markdown-preview
 # https://cloud.google.com/appengine/docs/flexible/nodejs/configuring-your-app-with-app-yaml
 automatic_scaling:
   max_instances: 1
+  min_instances: 0
 resources:
   cpu: 1
   memory_gb: 0.5
